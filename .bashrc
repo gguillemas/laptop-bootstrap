@@ -3,11 +3,11 @@
 
 # Prompt
 exitlight() {
-    if [[ $? == 0 ]]; then
-			echo -e "\e[32m•\e[0m"
-    else
-			echo -e "\e[31m•\e[0m"
-    fi
+	if [[ $? == 0 ]]; then
+		echo -e "\e[32m•\e[0m"
+	else
+		echo -e "\e[31m•\e[0m"
+	fi
 }
 export PS1='[$(exitlight)] \e[33m\t\e[0m \u@\h : \e[90m\w\e[0m \n\$ '
 
