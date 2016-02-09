@@ -15,4 +15,5 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 syntax on
-color molokai 
+color molokai
+highlight Normal ctermbg=black 
