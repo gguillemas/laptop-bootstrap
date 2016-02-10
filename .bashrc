@@ -9,7 +9,7 @@ exitlight() {
 		echo -e "\e[31m•\e[0m"
 	fi
 }
-export PS1='[$(exitlight)] \e[33m\t\e[0m \u@\h : \e[90m\w\e[0m \n\$ '
+export PS1='┌[$(exitlight)] \e[33m\t\e[0m \u@\h : \e[90m\w\e[0m \n└\$ '
 
 # Definitions.
 export EDITOR=$(which vim)
