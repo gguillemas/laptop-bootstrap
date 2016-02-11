@@ -1,18 +1,12 @@
 #!/bin/bash
 
-echo 'Warning! This script must be run as the regular user of the system.'
-read -r -p "Will '$USER' be the main user? [y/N] " response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
-then
-    echo 'Starting.'
-else
-		echo 'Exiting.'
-    exit
-fi
-
 USERNAME="$USER"
 
-su
+# Elevate privileges.
+if [ $EUID != 0 ]; then
+    su -c "bash $0" "$@"
+    exit $?
+fi
 
 # Switch release to testing.
 sed -i -e 's/ \(stable\|jessie\|wheezy\)/ testing/ig' /etc/apt/sources.list
