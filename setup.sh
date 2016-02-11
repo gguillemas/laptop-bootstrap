@@ -19,19 +19,12 @@ apt-get dist-upgrade
 
 # Install packages.
 apt-get install -y \
-# Essential
 sudo vim xorg tmux bash-completion \
-# Internet
 wicd-curses chromium curl wget \
-# Plug-ins
 pepperflashplugin-nonfree icedtea-plugin \
-# Development
 git gcc golang ruby python build-essential \
-# Media
 vlc feh \
-# Office
 libreoffice evince \
-# Fonts
 xfonts-terminus ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation
 
 # Add user to sudoers.
