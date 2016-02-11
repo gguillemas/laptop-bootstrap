@@ -10,7 +10,8 @@ else
     exit
 fi
 
-$USERNAME=$USER
+USERNAME="$USER"
+
 su
 
 # Switch release to testing.
@@ -25,7 +26,7 @@ apt-get dist-upgrade
 # Install packages.
 apt-get install -y \
 # Essential
-sudo vim xorg screen bash-completion \
+sudo vim xorg tmux bash-completion \
 # Internet
 wicd-curses curl wget \
 # Plug-ins
