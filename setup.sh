@@ -18,14 +18,16 @@ apt-get dist-upgrade
 # Install packages.
 apt-get install -y \
 sudo vim xorg tmux bash-completion \
-wicd-curses curl wget chromium \
-pepperflashplugin-nonfree icedtea-plugin \
 build-essential git golang ruby \
+wicd-curses curl wget chromium \
 vlc feh imagemagick \
 alsa-base alsa-utils \
 libreoffice evince \
-xfonts-terminus ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation \
-keepasx
+pepperflashplugin-nonfree icedtea-plugin \
+xfonts-terminus ttf-freefont \
+ttf-mscorefonts-installer ttf-bitstream-vera \
+ttf-dejavu ttf-liberation \
+laptop-mode-tools keepasx 
 
 # Add user to sudo group.
 adduser "$USER" sudo
