@@ -22,6 +22,7 @@ wicd-curses curl wget chromium \
 pepperflashplugin-nonfree icedtea-plugin \
 build-essential git golang ruby \
 vlc feh imagemagick \
+alsa-base alsa-utils \
 libreoffice evince \
 xfonts-terminus ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation
 
