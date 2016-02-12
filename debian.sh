@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copy to home.
+cp -rf "$(dirname $0)/." ~/temp/home && cd ~/temp/home
+
 # Elevate privileges.
 if [ $EUID != 0 ]; then
     su -c "bash $0" "$@"
