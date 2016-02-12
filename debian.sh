@@ -23,7 +23,7 @@ apt-get install -y \
 sudo vim xorg tmux bash-completion \
 build-essential git golang ruby \
 wicd-curses curl wget chromium \
-vlc feh imagemagick \
+vlc feh imagemagick scrot \
 alsa-base alsa-utils \
 libreoffice evince \
 pepperflashplugin-nonfree icedtea-plugin \
