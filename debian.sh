@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit on error.
+set -e
+
 # Copy to home.
 cp -rf "$(dirname $0)/." ~ && cd ~
 
