@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy to home.
-cp -rf "$(dirname $0)/." ~/temp/home && cd ~/temp/home
+cp -rf "$(dirname $0)/." ~ && cd ~
 
 # Elevate privileges.
 if [ $EUID != 0 ]; then
