@@ -33,13 +33,13 @@ pepperflashplugin-nonfree icedtea-plugin \
 xfonts-terminus ttf-freefont \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation \
-laptop-mode-tools keepasx 
+laptop-mode-tools keepassx 
 
 # Add user to sudo group.
 adduser "$USER" sudo
 
 # Install Suckless tools.
-apt-get install -y lib11-dev libxinerama-dev
+apt-get install -y libx11-dev libxinerama-dev
 make -C sources/dwm/ && make install clean -C sources/dwm/
 make -C sources/dmenu/ && make install clean -C sources/dmenu/
 make -C sources/slock/ && make install clean -C sources/slock/
