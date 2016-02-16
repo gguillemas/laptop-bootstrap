@@ -33,7 +33,7 @@ pepperflashplugin-nonfree icedtea-plugin \
 xfonts-terminus ttf-freefont \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation \
-laptop-mode-tools keepassx 
+laptop-mode-tools keepassx
 
 # Add user to sudo group.
 adduser "$USER" sudo
