@@ -1,7 +1,7 @@
 xset -b
 setxkbmap es
 xrandr --output DP2 --auto --right-of eDP1
-# sh ~/.fehbg
+bash ~/.fehbg
 
 while true; do
 	TIME=$(date)
