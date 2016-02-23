@@ -26,14 +26,14 @@ apt-get install -y \
 sudo vim xorg tmux bash-completion \
 build-essential git golang ruby \
 wicd-curses curl wget chromium \
-vlc feh imagemagick scrot \
+vlc feh imagemagick scrot dunst \
 alsa-base alsa-utils \
-libreoffice evince \
+libreoffice evince xclip \
 pepperflashplugin-nonfree icedtea-plugin \
 xfonts-terminus ttf-freefont \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation \
-laptop-mode-tools uswsusp \
+laptop-mode-tools xbacklight uswsusp \
 keepassx
 
 # Add user to sudo group.
