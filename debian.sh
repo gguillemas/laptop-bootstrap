@@ -28,7 +28,7 @@ build-essential git golang ruby \
 wicd-curses curl wget chromium \
 vlc feh imagemagick scrot dunst \
 alsa-base alsa-utils \
-libreoffice evince xclip \
+libreoffice evince xclip newsbeuter \
 pepperflashplugin-nonfree icedtea-plugin \
 xfonts-terminus ttf-freefont \
 ttf-mscorefonts-installer ttf-bitstream-vera \
