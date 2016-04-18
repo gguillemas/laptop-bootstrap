@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*";
+static const char font[]            = "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#FFFFFF";
@@ -60,6 +60,8 @@ static const char *volupcmd[]      = { "amixer", "-q", "sset", "Master", "5%-", 
 static const char *voldowncmd[]    = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };
 static const char *brightupcmd[]   = { "xbacklight", "-inc", "5", NULL };
 static const char *brightdowncmd[] = { "xbacklight", "-dec", "5", NULL };
+static const char *dclipcmd[]      = { "dclip.sh", "paste", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -98,6 +100,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_c,      spawn,          SHCMD("exec dclip.sh copy")},
+	{ MODKEY|ControlMask,           XK_v,      spawn,          {.v = dclipcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
