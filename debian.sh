@@ -18,6 +18,7 @@ sed -i -e 's/ main$/ main contrib non-free/ig' /etc/apt/sources.list
 
 # Update the system.
 apt-get update
+apt-get upgrade
 apt-get --download-only dist-upgrade
 apt-get dist-upgrade
 
