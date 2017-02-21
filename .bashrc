@@ -16,6 +16,7 @@ export EDITOR=$(which vim)
 export PATH=$PATH:/sbin/:/usr/sbin/:~/scripts/:~/software/
 export GOPATH=~/sources/go
 export TERM='xterm-256color'
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Aliases.
 alias ls='ls --color=auto'
@@ -23,7 +24,6 @@ alias ll='ls -alhrtF'
 alias l='ll'
 alias bang='disown & exit'
 alias newest='ls -rt | tail -1'
-alias jar='_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING; java -jar'
 
 # History options.
 HISTSIZE=10000
