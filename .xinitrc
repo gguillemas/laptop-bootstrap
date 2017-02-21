@@ -1,7 +1,8 @@
 xset -b
+wmname LG3D
 setxkbmap es
-sh ~/scripts/dual-screen.sh
-sh ~/.fehbg
+dual-screen.sh
+~/.fehbg
 
 while true; do
 	TIME=$(date)
@@ -11,8 +12,6 @@ while true; do
 	xsetroot -name "TEMPERATURE: $TEMPERATURE | BATTERY: $BATTERY | VOLUME: $VOLUME | $TIME"
 	sleep 10s
 done &
-
-wmname LG3D
 
 while true; do
 	dwm > /dev/null 2>&1
