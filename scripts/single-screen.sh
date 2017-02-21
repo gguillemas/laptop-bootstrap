@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 xrandr -s 0
