@@ -13,8 +13,8 @@ export PS1='┌[$(exitlight)] \e[33m\t\e[0m \u@\h : \e[90m\w\e[0m \n└\$ '
 
 # Definitions.
 export EDITOR=$(which vim)
-export PATH=$PATH:/sbin/:/usr/sbin/:~/scripts/:~/software/
-export GOPATH=~/sources/go
+export PATH=$PATH:/sbin/:/usr/sbin/:~/bin/:~/scripts/
+export GOPATH=~/src/go
 export TERM='xterm-256color'
 export _JAVA_AWT_WM_NONREPARENTING=1
 

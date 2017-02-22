@@ -41,10 +41,10 @@ adduser "$USER" sudo
 
 # Install Suckless tools.
 apt-get install -y libx11-dev libxinerama-dev
-make -C sources/dwm/ && make install clean -C sources/dwm/
-make -C sources/dmenu/ && make install clean -C sources/dmenu/
-make -C sources/slock/ && make install clean -C sources/slock/
-make -C sources/wmname/ && make install clean -C sources/wmname/
+make -C src/dwm/ && make install clean -C src/dwm/
+make -C src/dmenu/ && make install clean -C src/dmenu/
+make -C src/slock/ && make install clean -C src/slock/
+make -C src/wmname/ && make install clean -C src/wmname/
 
 # Fix xinit permissions.
 chmod u+s /usr/bin/xinit
