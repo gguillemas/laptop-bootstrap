@@ -1,5 +1,37 @@
-xterm*font: -*-iosevka term-medium-r-*-*-*-*-*-*-*-*-*-*
-xterm*background: #000000
-xterm*foreground: #FFFFFF
-xterm*cursorColor: #FFFFFF
-xterm*selectToClipboard: true
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+
+urxvt.scrollBar: false
+urxvt.font: xft:Iosevka Term:pixelsize=16
+urxvt.boldFont: xft:Iosevka Term:bold:pixelsize=16
+
+URxvt.depth: 32
+URxvt.transparent: false
+URxvt.fading: 0
+URxvt.loginShell: true
+URxvt.saveLines: 20000
+URxvt.internalBorder: 0
+URxvt.lineSpace: 0
+
+! Molokai Theme
+*foreground: #CCCCCC
+*background: #1B1D1E
+*color0: #1B1D1E
+*color8: #808080
+*color1: #FF0044
+*color9: #F92672
+*color2: #82B414
+*color10: #A6E22E
+*color3: #FD971F
+*color11: #E6DB74
+*color4: #266C98
+*color12: #7070F0
+*color5: #AC0CB1
+*color13: #D63AE1
+*color6: #AE81FF
+*color14: #66D9EF
+*color7: #CCCCCC
+*color15: #F8F8F2

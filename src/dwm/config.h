@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*";
+static const char font[]            = "-*-iosevka term-medium-r-*-*-14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#FFFFFF";
@@ -52,9 +52,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2]            = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]       = { "xterm", NULL};
+static const char *termcmd[]       = { "urxvt", NULL};
 static const char *lockcmd[]       = { "slock", NULL };
-static const char *mccmd[]         = { "xterm", "-e", "mc", NULL };
+static const char *mccmd[]         = { "urxvt", "-e", "mc", NULL };
 static const char *mutecmd[]       = { "amixer", "-q", "sset", "Master", "toggle", NULL };
 static const char *volupcmd[]      = { "amixer", "-q", "sset", "Master", "5%-", "unmute", NULL };
 static const char *voldowncmd[]    = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };

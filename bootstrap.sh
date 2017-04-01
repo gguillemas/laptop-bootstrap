@@ -31,6 +31,7 @@ pepperflashplugin-nonfree icedtea-plugin \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation ttf-freefont \
 tlp xbacklight uswsusp xclip autocutsel \
+rxvt-unicode rxvt-unicode-256color \
 feh imagemagick scrot curl wget git \
 vim mc dunst newsbeuter wicd-curses rtorrent \
 libreoffice mupdf vlc chromium keepassx \
