@@ -2,7 +2,7 @@
 
 # Extend display when an external monitor is connected.
 # Turn off external output when the monitor is disconnected.
-# This script is ment to be run automatically by an udev rule.
+# This script is meant to be triggered by an udev rule.
 # Only considers the case of a single external monitor.
 
 # Configure:
