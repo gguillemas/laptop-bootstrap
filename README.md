@@ -1,6 +1,6 @@
-# Linux Desktop Bootstrap
+# Linux Laptop Bootstrap
 
-This is a collection of scripts and configuration files to bootstrap a simple GNU/Linux desktop.
+This is a collection of scripts and configuration files to bootstrap a simple GNU/Linux laptop.
 
 ## Debian
 
@@ -15,9 +15,9 @@ The software installed by the boostrap script includes:
 - Bluetooth utilities.
 - Power management utilities.
 - Java and Flash browser plugins.
-- Common fonts and Iosevka typeface.
 - Frequently used command line tools.
 - Frequently used desktop applications.
+- Common fonts and Iosevka typeface.
 - Go development tools.
 
 ## Suckless

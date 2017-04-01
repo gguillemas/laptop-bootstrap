@@ -23,15 +23,15 @@ apt-get dist-upgrade
 
 # Install packages.
 apt-get install -y \
-xorg sudo build-essential curl wget git \
+xorg sudo build-essential \
 alsa-base alsa-utils \
 pulseaudio pulseaudio-alsa pulseaudio-bluetooth \
 bluez bluez-libs bluez-utils bluez-firmware \
 pepperflashplugin-nonfree icedtea-plugin \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation ttf-freefont \
-laptop-mode-tools xbacklight uswsusp \
-feh imagemagick scrot xclip autocutsel \
+tlp xbacklight uswsusp xclip autocutsel \
+feh imagemagick scrot curl wget git \
 vim mc dunst newsbeuter wicd-curses rtorrent \
 libreoffice mupdf vlc chromium keepassx \
 
@@ -57,6 +57,10 @@ make -C src/dwm/ && make install clean -C src/dwm/
 make -C src/dmenu/ && make install clean -C src/dmenu/
 make -C src/slock/ && make install clean -C src/slock/
 make -C src/wmname/ && make install clean -C src/wmname/
+
+# Setup screen autoconfiguration.
+echo -n "SUBSYSTEM==\"drm\", ACTION==\"change\", RUN+=\"/home/$USER/scripts/screen-auto.sh\"" > /etc/udev/rules.d/screen-auto.rules
+udevadm control --reload-rules
 
 # Fix xinit permissions.
 chmod u+s /usr/bin/xinit
