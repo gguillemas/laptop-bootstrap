@@ -60,19 +60,19 @@ static const char *volupcmd[]      = { "amixer", "-q", "sset", "Master", "5%-", 
 static const char *voldowncmd[]    = { "amixer", "-q", "sset", "Master", "5%+", "unmute", NULL };
 static const char *brightupcmd[]   = { "xbacklight", "-inc", "5", NULL };
 static const char *brightdowncmd[] = { "xbacklight", "-dec", "5", NULL };
-static const char *dclipcmd[]      = { "dclip.sh", "paste", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-
+static const char *printcmd[]      = { "scrot", "-s", "-e", "mv $f ~/pictures/", NULL}
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
 
 static Key keys[] = {
-	/* modifier  i                   key        function        argument */
-	{ 0,                XF86XK_AudioMute,      spawn,          {.v = mutecmd } },		    // 0x1008ff12
-	{ 0,         XF86XK_AudioLowerVolume,      spawn,          {.v = volupcmd } },		  // 0x1008ff11
-	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          {.v = voldowncmd } },	  // 0x1008ff13
-	{ 0,          XF86XK_MonBrightnessUp,      spawn,          {.v = brightupcmd } },	  // 0x1008ff02
-	{ 0,        XF86XK_MonBrightnessDown,      spawn,          {.v = brightdowncmd } },	// 0x1008ff03
+	/* modifier  i                   key       function        argument */
+	{ 0,                XF86XK_AudioMute,      spawn,          {.v = mutecmd } },       // 0x1008ff12
+	{ 0,         XF86XK_AudioLowerVolume,      spawn,          {.v = volupcmd } },      // 0x1008ff11
+	{ 0,         XF86XK_AudioRaiseVolume,      spawn,          {.v = voldowncmd } },    // 0x1008ff13
+	{ 0,          XF86XK_MonBrightnessUp,      spawn,          {.v = brightupcmd } },   // 0x1008ff02
+	{ 0,        XF86XK_MonBrightnessDown,      spawn,          {.v = brightdowncmd } }, // 0x1008ff03
+	{ 0,                            XK_Print,  spawn,          {.v = printcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
@@ -100,8 +100,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ControlMask,           XK_c,      spawn,          SHCMD("exec dclip.sh copy")},
-	{ MODKEY|ControlMask,           XK_v,      spawn,          {.v = dclipcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

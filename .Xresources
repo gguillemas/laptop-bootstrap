@@ -1,4 +1,5 @@
-xterm*font: -*-terminus-*-*-*-*-12-*-*-*-*-*-iso10646-*
-xterm*background:		#000000
-xterm*foreground:		#FFFFFF
-xterm*cursorColor:	#FFFFFF
+xterm*font: -*-iosevka term-medium-r-*-*-*-*-*-*-*-*-*-*
+xterm*background: #000000
+xterm*foreground: #FFFFFF
+xterm*cursorColor: #FFFFFF
+xterm*selectToClipboard: true
