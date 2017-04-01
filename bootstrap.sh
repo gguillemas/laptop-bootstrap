@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
 # Copy to home.
-cp -rf "$(dirname $0)/." ~ && cd ~
+cp -rf "$(dirname "$0")/." ~ && cd ~
 
 # Elevate privileges.
 if [ $EUID != 0 ]; then
@@ -23,18 +23,30 @@ apt-get dist-upgrade
 
 # Install packages.
 apt-get install -y \
-sudo vim xorg tmux \
-build-essential git golang ruby \
-wicd-curses curl wget chromium \
-vlc feh imagemagick scrot dunst \
+xorg sudo build-essential curl wget git \
 alsa-base alsa-utils \
-libreoffice evince xclip newsbeuter \
+pulseaudio pulseaudio-alsa pulseaudio-bluetooth \
+bluez bluez-libs bluez-utils bluez-firmware \
 pepperflashplugin-nonfree icedtea-plugin \
-xfonts-terminus ttf-freefont \
 ttf-mscorefonts-installer ttf-bitstream-vera \
-ttf-dejavu ttf-liberation \
+ttf-dejavu ttf-liberation ttf-freefont \
 laptop-mode-tools xbacklight uswsusp \
-keepassx
+feh imagemagick scrot xclip autocutsel \
+vim mc dunst newsbeuter wicd-curses rtorrent \
+libreoffice mupdf vlc chromium keepassx \
+
+# Install Go.
+curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
+
+# Install Iosevka Term font.
+mkdir .fonts
+wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/01-iosevka-1.12.1.zip -P .fonts
+wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/02-iosevka-term-1.12.1.zip -P .fonts
+unzip '.fonts/*.zip'
+mkfontscale .fonts
+mkfontdir .fonts
+fc-cache .fonts
+xset +fp .fonts
 
 # Add user to sudo group.
 adduser "$USER" sudo

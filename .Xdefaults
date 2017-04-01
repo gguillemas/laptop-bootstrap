@@ -1,4 +1,1 @@
-xterm*font: -*-terminus-*-*-*-*-12-*-*-*-*-*-iso10646-*
-xterm*background:		#000000
-xterm*foreground:		#FFFFFF
-xterm*cursorColor:	#FFFFFF
+.Xresources
