@@ -38,7 +38,7 @@ libreoffice mupdf vlc chromium keepassx \
 # Install Go.
 curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
 
-# Install Iosevka Term font.
+# Install Iosevka font.
 mkdir .fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/01-iosevka-1.12.1.zip -P .fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/02-iosevka-term-1.12.1.zip -P .fonts

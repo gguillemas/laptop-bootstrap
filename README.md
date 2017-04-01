@@ -10,13 +10,14 @@ Currently, the boostrap script is written with Debian in mind and uses `apt` to 
 
 The software installed by the boostrap script includes:
 
-- Xorg display server.
+- Display server.
 - ALSA and Pulse audio.
-- Java and Flash browser plugins.
+- Bluetooth utilities.
 - Power management utilities.
+- Java and Flash browser plugins.
+- Common fonts and Iosevka typeface.
 - Frequently used command line tools.
-- Frequently used graphical applications.
-- Common fonts and Iosevka.
+- Frequently used desktop applications.
 - Go development tools.
 
 ## Suckless
