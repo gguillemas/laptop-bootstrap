@@ -43,11 +43,11 @@ curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /us
 mkdir .fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/01-iosevka-1.12.1.zip -P .fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/02-iosevka-term-1.12.1.zip -P .fonts
-unzip '.fonts/*.zip'
+unzip '.fonts/*.zip' -d .fonts
 mkfontscale .fonts
 mkfontdir .fonts
 fc-cache .fonts
-xset +fp .fonts
+xset +fp ~/.fonts
 
 # Add user to sudo group.
 adduser "$USER" sudo
