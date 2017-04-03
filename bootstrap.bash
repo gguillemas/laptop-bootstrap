@@ -24,36 +24,38 @@ apt-get dist-upgrade
 # Install packages.
 apt-get install -y \
 xorg sudo build-essential \
-alsa-base alsa-utils \
-pulseaudio pulseaudio-alsa pulseaudio-bluetooth \
-bluez bluez-libs bluez-utils bluez-firmware \
-pepperflashplugin-nonfree icedtea-plugin \
+pulseaudio pulseaudio-module-bluetooth bluez-firmware \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation ttf-freefont \
 tlp xbacklight uswsusp xclip autocutsel \
-rxvt-unicode rxvt-unicode-256color \
-feh imagemagick scrot curl wget git \
-vim mc dunst newsbeuter wicd-curses rtorrent \
-libreoffice mupdf vlc chromium keepassx \
+rxvt-unicode feh imagemagick scrot curl wget git \
+vim mc dunst newsbeuter wicd-curses rtorrent acpi \
+libreoffice mupdf vlc chromium keepassx
+
+# Uncomment if wanted.
+# apt-get install -y pepperflashplugin-nonfree icedtea-plugin
+
+# Depends on rxvt-unicode in a weird way.
+apt-get install -y rxvt-unicode-256color
 
 # Install Go.
 curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 # Install Iosevka font.
-mkdir .fonts
+mkdir -p /home/$USER/.fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/01-iosevka-1.12.1.zip -P .fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/02-iosevka-term-1.12.1.zip -P .fonts
-unzip '.fonts/*.zip' -d .fonts
-mkfontscale .fonts
-mkfontdir .fonts
-fc-cache .fonts
-xset +fp ~/.fonts
+unzip '.fonts/*.zip' -d /home/$USER/.fonts
+mkfontscale /home/$USER/.fonts
+mkfontdir /home/$USER/.fonts
+fc-cache /home/$USER/.fonts
+xset +fp /home/$USER/.fonts || true # TODO: Fix. Can't be done without X running.
 
 # Add user to sudo group.
 adduser "$USER" sudo
 
 # Install Suckless tools.
-apt-get install -y libx11-dev libxinerama-dev libxft-dev
+apt-get install -y libx11-dev libxinerama-dev libxft-dev libxrandr-dev
 make -C src/dwm/ && make install clean -C src/dwm/
 make -C src/dmenu/ && make install clean -C src/dmenu/
 make -C src/slock/ && make install clean -C src/slock/
