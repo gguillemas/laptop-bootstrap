@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -6,7 +6,7 @@ set -e
 cp -rf "$(dirname "$0")/." ~ && cd ~
 
 # Elevate privileges.
-if [ $EUID != 0 ]; then
+if [ $EUID -ne 0 ]; then
     su -c "bash $0" "$@"
     exit $?
 fi
