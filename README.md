@@ -23,3 +23,26 @@ The software installed by the boostrap script includes:
 ## Suckless
 
 This repository contains a mirror of some customized [Suckless](http://suckless.org) tools.
+
+### dwm
+
+Version 6.1
+
+- Movestack patch.
+- Volume and brightness keys.
+- Application (scrot, mc, urxvt...) commands.
+- Uses the Meta/Super key as modifier.
+
+### dmenu
+
+Version 4.6
+
+### slock
+
+Version 1.4
+
+- Minor visual customizations.
+
+### wmname
+
+Version 0.2

@@ -161,7 +161,7 @@ drw_load_fonts(Drw* drw, const char *fonts[], size_t fontcount)
 
 	for (i = 0; i < fontcount; i++) {
 		if (drw->fontcount >= DRW_FONT_CACHE_SIZE) {
-			die("font cache exhausted.\n");
+			die("Font cache exhausted.\n");
 		} else if ((font = drw_font_xcreate(drw, fonts[i], NULL))) {
 			drw->fonts[drw->fontcount++] = font;
 		}
