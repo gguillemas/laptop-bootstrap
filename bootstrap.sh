@@ -53,14 +53,14 @@ xset +fp ~/.fonts
 adduser "$USER" sudo
 
 # Install Suckless tools.
-apt-get install -y libx11-dev libxinerama-dev
+apt-get install -y libx11-dev libxinerama-dev libxft-dev
 make -C src/dwm/ && make install clean -C src/dwm/
 make -C src/dmenu/ && make install clean -C src/dmenu/
 make -C src/slock/ && make install clean -C src/slock/
 make -C src/wmname/ && make install clean -C src/wmname/
 
 # Setup screen autoconfiguration.
-echo -n "SUBSYSTEM==\"drm\", ACTION==\"change\", RUN+=\"/home/$USER/scripts/screen-auto.sh\"" > /etc/udev/rules.d/screen-auto.rules
+echo -n "SUBSYSTEM==\"drm\", ACTION==\"change\", RUN+=\"sudo -u $USER /home/$USER/.scripts/screen-auto.sh\"" > /etc/udev/rules.d/screen-auto.rules
 udevadm control --reload-rules
 
 # Fix xinit permissions.
