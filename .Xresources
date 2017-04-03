@@ -16,6 +16,12 @@ URxvt.saveLines: 20000
 URxvt.internalBorder: 5
 URxvt.lineSpace: 0
 
+! Fix Ctrl+Arrow
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
 ! Molokai Theme
 *background: #101010
 *foreground: #d0d0d0
