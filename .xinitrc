@@ -1,7 +1,6 @@
 xset -b
 wmname LG3D
-setxkbmap es
-screen-auto.sh
+~/.scripts/screen-auto.sh
 ~/.fehbg
 
 while true; do
