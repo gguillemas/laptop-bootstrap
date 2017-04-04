@@ -2,9 +2,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Iosevka Term:size=14"
+	"Iosevka Term Light:size=14"
 };
-static const char dmenufont[]       = "Iosevka Term:size=14";
+static const char dmenufont[]       = "Iosevka Term Light:size=14";
 static const char normbordercolor[] = "#101010";
 static const char normbgcolor[]     = "#101010";
 static const char normfgcolor[]     = "#d0d0d0";

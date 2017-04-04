@@ -5,8 +5,8 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 
 urxvt.scrollBar: false
-urxvt.font: xft:Iosevka Term:pixelsize=16
-urxvt.boldFont: xft:Iosevka Term:bold:pixelsize=16
+urxvt.font: xft:Iosevka Term Light:pixelsize=16
+urxvt.boldFont: xft:Iosevka Term Light:bold:pixelsize=16
 
 URxvt.depth: 32
 URxvt.transparent: false
