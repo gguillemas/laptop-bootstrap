@@ -1,6 +1,6 @@
 xset -b
 wmname LG3D
-setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+setxkbmap us # TODO: Test this.
 ~/.scripts/screen-auto.sh
 ~/.fehbg
 

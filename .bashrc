@@ -10,6 +10,7 @@ exitcode() {
 	fi
 }
 
+# TODO: Fix prompt so it doesn't break wrapping.
 export PS1='[$(exitcode)] \u@\h : \e[90m\w\e[0m $ '
 
 # Definitions.
