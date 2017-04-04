@@ -8,7 +8,7 @@ static const char dmenufont[]       = "Iosevka Term:size=14";
 static const char normbordercolor[] = "#101010";
 static const char normbgcolor[]     = "#101010";
 static const char normfgcolor[]     = "#d0d0d0";
-static const char selbordercolor[]  = "#960050";
+static const char selbordercolor[]  = "#80ff00";
 static const char selbgcolor[]      = "#960050";
 static const char selfgcolor[]      = "#d0d0d0";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
