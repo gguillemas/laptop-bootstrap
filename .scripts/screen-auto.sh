@@ -5,16 +5,13 @@
 # This script is meant to be triggered by an udev rule.
 # Only considers the case of a single external monitor.
 
-# Position of the laptop relative to the monitor.
-position="right"
+# Position of the monitor relative to the laptop.
+position="left"
 
-int=$(xrandr | grep -oP "(.*?)(?= connected)" | sed -n 1p)
-ext=$(xrandr | grep -oP "(.*?)(?= connected)" | sed -n 2p)
-
-if [ $(xrandr | grep -oP "(.*?)(?= connected)" | wc -l) -gt 1 ]; then
-	xrandr --output $int --auto --${position}-of $ext --output $ext --auto
+if [ `xrandr | grep -oP "(.*?)(?= connected)" | wc -l` -gt 1 ]; then
+	mons -e $position
 else
-	xrandr --output $ext --off --output $int --auto
+	mons -o
 fi
 
 sh ~/.fehbg

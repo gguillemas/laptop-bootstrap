@@ -62,6 +62,7 @@ make -C src/slock/ && make install clean -C src/slock/
 make -C src/wmname/ && make install clean -C src/wmname/
 
 # Setup screen autoconfiguration.
+git clone --recursive https://github.com/Ventto/mons src && make install -C src/mons/
 echo -n "SUBSYSTEM==\"drm\", ACTION==\"change\", RUN+=\"sudo -u $USER /home/$USER/.scripts/screen-auto.sh\"" > /etc/udev/rules.d/screen-auto.rules
 udevadm control --reload-rules
 
