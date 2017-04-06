@@ -1,17 +1,7 @@
 # If shell is interactive.
 [[ $- != *i* ]] && return
 
-# Prompt.
-exitcode() {
-	if [[ $? == 0 ]]; then
-		echo -e "\e[32m$?\e[0m"
-	else
-		echo -e "\e[31m$?\e[0m"
-	fi
-}
-
-# TODO: Fix prompt so it doesn't break wrapping.
-export PS1='[$(exitcode)] \u@\h : \e[90m\w\e[0m $ '
+export PS1='\u@\h : \[\e[90m\]\w\[\e[0m\] $ '
 
 # Definitions.
 export EDITOR=$(which vim)
