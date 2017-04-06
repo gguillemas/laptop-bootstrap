@@ -1,4 +1,3 @@
-set number
 set hlsearch
 set background=dark
 set smartcase
@@ -14,7 +13,7 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 syntax on
-color molokai
+color base16-ocean 
 highlight Normal ctermbg=black
 autocmd FileType ruby,eruby set ts=2 sw=2 sts=2 expandtab
 autocmd FileType python set ts=4 sw=4 sts=4 expandtab 
