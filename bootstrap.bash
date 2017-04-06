@@ -23,8 +23,8 @@ apt-get dist-upgrade
 
 # Install packages.
 apt-get install -y \
-xorg sudo build-essential \
-pulseaudio pulseaudio-module-bluetooth bluez-firmware \
+xorg sudo build-essential bluez-firmware \
+pulseaudio pulseaudio-module-bluetooth pavucontrol \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation ttf-freefont \
 tlp xbacklight uswsusp xclip autocutsel \
@@ -65,6 +65,3 @@ make -C src/wmname/ && make install clean -C src/wmname/
 git clone --recursive https://github.com/Ventto/mons src && make install -C src/mons/
 echo -n "SUBSYSTEM==\"drm\", ACTION==\"change\", RUN+=\"sudo -u $USER /home/$USER/.scripts/screen-auto.sh\"" > /etc/udev/rules.d/screen-auto.rules
 udevadm control --reload-rules
-
-# Fix xinit permissions.
-chmod u+s /usr/bin/xinit
