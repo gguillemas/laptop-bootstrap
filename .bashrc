@@ -33,3 +33,6 @@ if ! shopt -oq posix; then
 		. /etc/bash_completion
 	fi
 fi
+
+# Fill buffer to fix urxvt window resize bug.
+for i in {1...$LINES}; do echo; done; clear
