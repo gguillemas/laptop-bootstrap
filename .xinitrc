@@ -15,7 +15,7 @@ while true; do
 done &
 
 # Sync clipboard contents to primary selection.
-autocutsel -s CLIPBOARD -f
+autocutsel -s PRIMARY -f
 
 while true; do
 	dwm > /dev/null 2>&1

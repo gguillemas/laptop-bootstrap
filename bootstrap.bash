@@ -53,7 +53,7 @@ unzip '.fonts/*.zip' -d /home/$USER/.fonts
 mkfontscale /home/$USER/.fonts
 mkfontdir /home/$USER/.fonts
 fc-cache /home/$USER/.fonts
-# TODO: Fix. Can't be done without X running.
+# FIXME: Can't be done without X running.
 xset +fp /home/$USER/.fonts || true
 
 # Add user to sudo group.
@@ -61,6 +61,7 @@ adduser "$USER" sudo
 
 # Install Suckless tools.
 apt-get install -y libx11-dev libxinerama-dev libxft-dev libxrandr-dev
+# TODO: Store only changes as patches.
 make -C src/dwm/ && make install clean -C src/dwm/
 make -C src/dmenu/ && make install clean -C src/dmenu/
 make -C src/slock/ && make install clean -C src/slock/
