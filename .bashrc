@@ -6,7 +6,7 @@ export PS1='\u@\h : \[\e[90m\]\w\[\e[0m\] $ '
 # Definitions.
 export EDITOR=$(which vim)
 export GOPATH=~/src/go
-export PATH=$PATH:/sbin/:/usr/sbin/:~/bin/:~/scripts/:~$GOPATH/bin/
+export PATH=$PATH:/sbin/:/usr/sbin/:~/bin/:~/scripts/:/usr/local/go/bin/:$GOPATH/bin/
 export TERM='xterm-256color'
 export _JAVA_AWT_WM_NONREPARENTING=1
 
