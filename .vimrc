@@ -1,4 +1,6 @@
 execute pathogen#infect()
+filetype plugin on
+let g:go_fmt_command = "goimports"
 set t_Co=256
 set hlsearch
 set background=dark

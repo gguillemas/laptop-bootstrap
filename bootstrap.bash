@@ -41,12 +41,14 @@ apt-get install -y rxvt-unicode-256color
 # Configure chromium to allow remote extensions.
 echo 'export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"' > /etc/chromium.d/enable-remote-extensions
 
+# Install go.
+curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
+
 # Configure vim.
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-# Install go.
-curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+git clone git://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 
 # Install Iosevka font.
 mkdir -p /home/$USER/.fonts
