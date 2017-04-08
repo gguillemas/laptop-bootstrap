@@ -38,6 +38,10 @@ libreoffice mupdf vlc chromium keepassx
 # Depends on rxvt-unicode in a weird way.
 apt-get install -y rxvt-unicode-256color
 
+# Configure Vim.
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 # Install Go.
 curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
 
@@ -49,7 +53,8 @@ unzip '.fonts/*.zip' -d /home/$USER/.fonts
 mkfontscale /home/$USER/.fonts
 mkfontdir /home/$USER/.fonts
 fc-cache /home/$USER/.fonts
-xset +fp /home/$USER/.fonts || true # TODO: Fix. Can't be done without X running.
+# TODO: Fix. Can't be done without X running.
+xset +fp /home/$USER/.fonts || true
 
 # Add user to sudo group.
 adduser "$USER" sudo
