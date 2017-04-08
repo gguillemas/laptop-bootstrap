@@ -1,6 +1,7 @@
 xset -b
 wmname LG3D
 setxkbmap us
+xrdb ~/.Xresources
 ~/.scripts/screen-auto.sh
 xsetroot -solid "#405c79"
 ~/.fehbg
