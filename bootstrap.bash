@@ -38,11 +38,14 @@ libreoffice mupdf vlc chromium keepassx
 # Depends on rxvt-unicode in a weird way.
 apt-get install -y rxvt-unicode-256color
 
-# Configure Vim.
+# Configure chromium to allow remote extensions.
+echo 'export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"' > /etc/chromium.d/enable-remote-extensions
+
+# Configure vim.
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-# Install Go.
+# Install go.
 curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 # Install Iosevka font.
