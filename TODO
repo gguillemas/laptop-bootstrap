@@ -1,1 +1,2 @@
 Check out: https://github.com/muennich/urxvt-perls
+Permanently set locale with: localectl set-x11-keymap us pc105 compose:ralt
