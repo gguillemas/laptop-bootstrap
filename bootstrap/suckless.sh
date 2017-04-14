@@ -20,4 +20,4 @@ make -C src/slock/ && make install clean -C src/slock/
 
 git clone http://git.suckless.org/wmname src/wmname
 git -C src/wmname/ checkout 0.2
-make -C src/wmname/
+make -C src/wmname/ && make install clean -C src/wmname/
