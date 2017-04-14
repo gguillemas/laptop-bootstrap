@@ -1,0 +1,17 @@
+diff -u ../laptop-bootstrap/src/slock/config.def.h slock/config.def.h
+--- ../laptop-bootstrap/src/slock/config.def.h	2017-04-08 10:24:46.838231632 +0200
++++ slock/config.def.h	2017-04-11 20:15:56.852724667 +0200
+@@ -3,9 +3,9 @@
+ static const char *group = "nogroup";
+ 
+ static const char *colorname[NUMCOLS] = {
+-	[INIT] =   "black",     /* after initialization */
+-	[INPUT] =  "#005577",   /* during input */
+-	[FAILED] = "#CC3333",   /* wrong password */
++	[INIT] =   "#000000",   /* after initialization */
++        [INPUT] =  "#223b54",   /* during input */
++        [FAILED] = "#bf5656",   /* wrong password */
+ };
+ 
+ /* treat a cleared input like a wrong password (color) */
+Only in slock/: .git

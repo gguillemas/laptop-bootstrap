@@ -11,6 +11,9 @@ if [ $EUID -ne 0 ]; then
     exit $?
 fi
 
+# Add user to sudo group.
+adduser "$USER" sudo
+
 # Switch to testing release and add "contrib" and "non-free" repositories.
 sed -i -e 's/ \(stable\|jessie\|wheezy\)/ testing/ig' /etc/apt/sources.list
 sed -i -e 's/ main$/ main contrib non-free/ig' /etc/apt/sources.list
@@ -38,39 +41,20 @@ libreoffice mupdf vlc chromium keepassx
 # Depends on rxvt-unicode in a weird way.
 apt-get install -y rxvt-unicode-256color
 
-# Configure chromium to allow remote extensions.
+# Configure chromium.
 echo 'export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"' > /etc/chromium.d/enable-remote-extensions
 
 # Install go.
 curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 # Configure vim.
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-git clone git://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
+sh boostrap/vim.sh
 
 # Install Iosevka font.
-mkdir -p /home/$USER/.fonts
-wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/01-iosevka-1.12.1.zip -P .fonts
-wget https://github.com/be5invis/Iosevka/releases/download/v1.12.1/02-iosevka-term-1.12.1.zip -P .fonts
-unzip '.fonts/*.zip' -d /home/$USER/.fonts
-mkfontscale /home/$USER/.fonts
-mkfontdir /home/$USER/.fonts
-fc-cache /home/$USER/.fonts
-# FIXME: Can't be done without X running.
-xset +fp /home/$USER/.fonts || true
-
-# Add user to sudo group.
-adduser "$USER" sudo
+sh boostrap/iosevka.sh
 
 # Install Suckless tools.
-apt-get install -y libx11-dev libxinerama-dev libxft-dev libxrandr-dev
-# TODO: Store only changes as patches.
-make -C src/dwm/ && make install clean -C src/dwm/
-make -C src/dmenu/ && make install clean -C src/dmenu/
-make -C src/slock/ && make install clean -C src/slock/
-make -C src/wmname/ && make install clean -C src/wmname/
+sh bootstrap/suckless.sh
 
 # Setup screen autoconfiguration.
 git clone --recursive https://github.com/Ventto/mons src && make install -C src/mons/
