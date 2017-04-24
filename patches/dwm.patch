@@ -14,7 +14,7 @@
 -static const char selbordercolor[]  = "#005577";
 -static const char selbgcolor[]      = "#005577";
 -static const char selfgcolor[]      = "#eeeeee";
-+static const char dmenufont[]       = "Iosevka Term Light:size=12";
++static const char dmenufont[]       = "Iosevka Term Light:size=14";
 +static const char normbordercolor[] = "#555555";
 +static const char normbgcolor[]     = "#555555";
 +static const char normfgcolor[]     = "#bbbbbb";
