@@ -15,5 +15,5 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-color base16-harmonic-dark
+color molokai
 syntax on
