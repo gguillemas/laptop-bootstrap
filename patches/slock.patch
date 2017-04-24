@@ -9,8 +9,8 @@ diff -u ../laptop-bootstrap/src/slock/config.def.h slock/config.def.h
 -	[INPUT] =  "#005577",   /* during input */
 -	[FAILED] = "#CC3333",   /* wrong password */
 +	[INIT] =   "#000000",   /* after initialization */
-+        [INPUT] =  "#223b54",   /* during input */
-+        [FAILED] = "#bf5656",   /* wrong password */
++        [INPUT] =  "#555555",   /* during input */
++        [FAILED] = "#fa2573",   /* wrong password */
  };
  
  /* treat a cleared input like a wrong password (color) */
