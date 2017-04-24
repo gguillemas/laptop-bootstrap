@@ -15,7 +15,7 @@ make -C src/dmenu/ && make install clean -C src/dmenu/
 
 git clone http://git.suckless.org/slock src/slock
 git -C src/slock/ checkout 1.4
-patch -d src/dwm < patches/slock.patch
+patch -d src/slock < patches/slock.patch
 make -C src/slock/ && make install clean -C src/slock/
 
 git clone http://git.suckless.org/wmname src/wmname
