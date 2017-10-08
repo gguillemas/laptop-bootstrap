@@ -30,7 +30,7 @@ xorg sudo build-essential bluez-firmware \
 pulseaudio pulseaudio-module-bluetooth pavucontrol \
 ttf-mscorefonts-installer ttf-bitstream-vera \
 ttf-dejavu ttf-liberation ttf-freefont \
-tlp xbacklight uswsusp xclip autocutsel \
+tlp xbacklight uswsusp xclip autocutsel parcellite \
 rxvt-unicode feh imagemagick scrot curl wget git \
 vim mc dunst newsbeuter wicd-curses rtorrent acpi \
 libreoffice mupdf vlc chromium keepassx

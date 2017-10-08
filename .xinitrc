@@ -16,7 +16,7 @@ while true; do
 done &
 
 # Sync clipboard contents to primary selection.
-autocutsel -s PRIMARY -f
+parcellite -n &
 
 while true; do
 	dwm > /dev/null 2>&1
