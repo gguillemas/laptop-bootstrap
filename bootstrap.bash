@@ -45,7 +45,7 @@ apt-get install -y rxvt-unicode-256color
 echo 'export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"' > /etc/chromium.d/enable-remote-extensions
 
 # Install go.
-curl https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz | tar -C /usr/local -xz
+curl https://go.dev/dl/go1.17.6.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 # Configure vim.
 sh boostrap/vim.sh
